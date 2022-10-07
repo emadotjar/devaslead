@@ -1,4 +1,91 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "ananke"
+baseurl      = "localhost"
+title        = "Developers as Leaders"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # OS theme is default when not provided, but you can force it to "light" or "dark"
+  defaultTheme = "dark"
+
+  # Subtitle for home
+  homeSubtitle = "People, Tech, and the intersection between these worlds"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+
+  # Metadata mostly used in document's head
+  description = "Developers as Leaders"
+  keywords = "homepage, blog, about"
+  images = [""]
+
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/emadotjar"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:emanuele.giarlini@gmail.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/emadotjar"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/emanuele-giarlini/"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/2649618/ema-jar"
+
+  [params.footer]
+    trademark = false
+    rss = false
+    copyright = false
+    author = false
+
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+    ]
+
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "Developers as Leaders"
+    subtitle = "People, Tech, and the intersection between these worlds"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "$ cd devaslead/home"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
